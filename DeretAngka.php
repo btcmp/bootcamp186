@@ -87,10 +87,40 @@ class DeretAngka{
 		
 		return $result;
 	}
+	
+	//=> 0, 1,3,6,10..
+	public function getLastTriAngular($n){
+		$temporary = 0;
+		for($i =0; $i < $n; $i++){
+			$temporary = $temporary + $i;
+		}
+		return $temporary;
+	}
+	
+	//array => 0, 1, 3, 6, ...
+	public function getTriAngular($n){
+		$hasil = array();
+		$temporary = 0;
+		for($i =0; $i < $n; $i++){
+			$temporary = $temporary + $i;
+			$hasil[$i] = $temporary;
+		}
+		return $hasil;
+	}
 }	
+
+/*
+	increment | temporary
+	0, 0
+	1, 1
+	2, 3
+	3, 6
+	
+*/
 
 //test
 //$deret=new DeretAngka();
+//$deret->getLastTriAngular(4+1);
 //$result = $deret->getTambah(12, 13); //argument
 //echo $result;
 //echo json_encode($deret->getIncrement(9));
