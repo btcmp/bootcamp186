@@ -3,7 +3,7 @@
 INCLUDE '../Matrix.php';
 INCLUDE '../DeretAngka.php';
 
-class Soal1B extends Matrix{
+class Soal2B extends Matrix{
 
 	private $deret;
 
@@ -20,19 +20,14 @@ class Soal1B extends Matrix{
 		echo json_encode($var2);
 		echo "<p/>";
 		
-		
-		$index = 1;
 		for($bangun = 0; $bangun < $n; $bangun++){
-			$maxColumn = -1;
 			for($i = 0; $i < $bangun+1; $i++){
-				$maxColumn = $maxColumn + $index;
 				for($j = 0; $j < $bangun+1; $j++){
-					//$this->matrix[$i+$var2[$bangun]][$j+$var2[$bangun]] = "". $index++;
-					$this->matrix[$i+$var2[$bangun]][$this->kolom - 1 - ($j+$var2[$bangun])] = "". ($maxColumn - $j);
+					//$this->matrix[$i+$var2[$bangun]][$j+$var2[$bangun]] = "*";
+					//dibalik
+					$this->matrix[$i+$var2[$bangun]][$this->kolom - 1 - ($j+$var2[$bangun])] = "*";
 				}
-				
 			}
-			$index = $index + 1;
 		}
 		
 		
@@ -68,7 +63,7 @@ class Soal1B extends Matrix{
 	}
 }
 
-$jawab = new Soal1B();
+$jawab = new Soal2B();
 $jawab->form1();
 $jawab->setMatrix(@$_POST['input']);
 $jawab->showMatrix();

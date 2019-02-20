@@ -107,6 +107,16 @@ class DeretAngka{
 		}
 		return $hasil;
 	}
+	
+	//0, 1, 4, 9..
+	public function getPangkat($n){
+		$hasil = array();
+		for($i = 0; $i < $n; $i++){
+			$hasil[$i] = $i*$i;
+		}
+		
+		return $hasil;
+	}
 }	
 
 /*
