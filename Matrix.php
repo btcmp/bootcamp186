@@ -25,7 +25,7 @@ class Matrix{
 				if(@$this->matrix[$i][$j] != null){
 					echo @$this->matrix[$i][$j];
 				} else {
-					echo "#";
+					echo "&nbsp;&nbsp;&nbsp;";
 				}
 				echo "</td>";	
 			} 

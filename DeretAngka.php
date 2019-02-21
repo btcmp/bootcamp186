@@ -117,6 +117,20 @@ class DeretAngka{
 		
 		return $hasil;
 	}
+	
+	//output : 3, 7, 12, 18
+	public function getMaxXXX($n){
+		$result = array();
+		$hasil = 0;
+		$increment = 3;
+		for($i = 0; $i < $n; $i++){
+			$result[$i] = $hasil;
+			$hasil = $hasil + $increment;
+			//echo $hasil;
+			$increment++;
+		}
+		return $result;
+	}
 }	
 
 /*
