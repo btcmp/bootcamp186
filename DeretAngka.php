@@ -76,6 +76,20 @@ class DeretAngka{
 		return $result;
 	}
 	
+	//1,1,2,3,5...
+	public function get3Fibo($n){
+		$result = array();
+		$result[0] = 1;
+		$result[1] = 1;
+		$result[2] = 1;
+		
+		for($i = 3; $i < $n; $i++){
+			$result[$i] = $result[$i-1] + $result[$i-2] + $result[$i-3];
+		}
+		
+		return $result;
+	}
+	
 	public function getChars($n){
 		$result = array();
 		$char = "A";
